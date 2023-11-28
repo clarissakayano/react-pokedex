@@ -92,8 +92,8 @@ const Home: React.FC = () => {
                       <h2>
                         <Link
                           style={{
-                            color: fontColors[pokemon.color.name]
-                              ? fontColors[pokemon.color.name]
+                            color: fontColors[pokemon.color]
+                              ? fontColors[pokemon.color]
                               : fontColors.default,
                           }}
                           to={`/${pokemon.name}`}
