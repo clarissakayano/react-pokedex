@@ -35,7 +35,8 @@ const PokemonCard: React.FC<IPokemonCardProps> = ({ pokemon }) => (
       <ul>
         {pokemon.stats?.map((stat) => (
           <li key={stat.name}>
-            {unslugify(stat.name)}: <ProgressBar variant="danger" now={stat.value} />
+            {unslugify(stat.name)}:
+            <ProgressBar variant="danger" now={stat.value} />
           </li>
         ))}
       </ul>

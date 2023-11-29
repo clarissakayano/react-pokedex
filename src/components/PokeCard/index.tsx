@@ -30,15 +30,14 @@ const fontColors: colorsType = {
 };
 const PokeCard: React.FC<IPokeCardsProps> = ({ pokemon }) => (
   <div>
-    <Card>
+    <Card
       key={pokemon.id}
-      style=
-      {{
+      style={{
         margin: 10,
-        backgroundColor: colors[pokemon.color]
-          ? colors[pokemon.color]
-          : colors.default,
+        backgroundColor: colors[pokemon.color] || colors.default,
       }}
+    >
+      <Card.Body>{/* Conteúdo do Card aqui */}</Card.Body>
     </Card>
   </div>
 );
