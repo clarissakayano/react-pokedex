@@ -38,11 +38,10 @@ export const normalizePokemonsQueryResults = (
         : 0,
     },
     types: item.types.data.map((t) => t.type.name),
-    image:
-      `${
-        JSON.parse(item?.images[0]?.sprites)?.other?.['official-artwork']
-          ?.front_default
-      }`.replace('/media', Config.api.baseUrl) ?? null,
+    image: `${
+      JSON.parse(item?.images[0]?.sprites)?.other?.['official-artwork']
+        ?.front_default
+    }`.replace('/media', Config.api.baseUrl ?? '') as string | null,
     description: item.specy?.descriptions?.[0]?.text ?? undefined,
     move: item.moves?.[0]?.move?.name ?? undefined,
     stats:
